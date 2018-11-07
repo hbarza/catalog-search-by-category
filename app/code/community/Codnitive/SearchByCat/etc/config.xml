@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * CODNITIVE
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE_EULA.html.
+ * It is also available through the world-wide-web at this URL:
+ * http://www.codnitive.com/en/terms-of-service-softwares/
+ * http://www.codnitive.com/fa/terms-of-service-softwares/
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade to newer
+ * versions in the future.
+ *
+ * @category   Codnitive
+ * @package    Codnitive_SearchByCat
+ * @author     Hassan Barza <support@codnitive.com>
+ * @copyright  Copyright (c) 2012 CODNITIVE Co. (http://www.codnitive.com)
+ * @license    http://www.codnitive.com/en/terms-of-service-softwares/ End User License Agreement (EULA 1.0)
+ */
+-->
+<config>
+	<modules>
+		<Codnitive_SearchByCat>
+			<version>1.0.00</version>
+			<title>Catalog Search by Category</title>
+			<link><![CDATA[http://www.codnitive.com/]]></link>
+			<codPool>community</codPool>
+		</Codnitive_SearchByCat>
+	</modules>
+	<global>
+		<blocks>
+			<searchbycat>
+				<class>Codnitive_SearchByCat_Block</class>
+			</searchbycat>
+			<catalogsearch>
+				<rewrite>
+					<advanced_form>Codnitive_SearchByCat_Block_Advanced_Form</advanced_form>
+				</rewrite>
+			</catalogsearch>
+		</blocks>
+		<helpers>
+			<searchbycat>
+				<class>Codnitive_SearchByCat_Helper</class>
+			</searchbycat>
+		</helpers>
+		<models>
+			<searchbycat>
+				<class>Codnitive_SearchByCat_Model</class>
+			</searchbycat>
+			<catalogsearch>
+				<rewrite>
+					<advanced>Codnitive_SearchByCat_Model_Advanced</advanced>
+				</rewrite>
+			</catalogsearch>
+		</models>
+	</global>
+
+	<adminhtml>
+		<translate>
+			<modules>
+				<Codnitive_SearchByCat>
+					 <files>
+						  <default>Codnitive_SearchByCat.csv</default>
+					 </files>
+				</Codnitive_SearchByCat>
+			</modules>
+		</translate>
+	</adminhtml>
+
+	<frontend>
+		<translate>
+			<modules>
+				<Codnitive_SearchByCat>
+					 <files>
+						  <default>Codnitive_SearchByCat.csv</default>
+					 </files>
+				</Codnitive_SearchByCat>
+			</modules>
+		</translate>
+		<layout>
+			<updates>
+				<searchbycat>
+					<file>codnitive/searchbycat.xml</file>
+				</searchbycat>
+			</updates>
+		</layout>
+	</frontend>
+
+	<default>
+		<codnitivecatalog>
+			<searchbycat>
+				<active>0</active>
+				<auto_select_current_category>1</auto_select_current_category>
+				<category_parent>root</category_parent>
+				<children_auto>first</children_auto>
+				<max_depth>3</max_depth>
+				<indentation><![CDATA[&nbsp;&nbsp;&nbsp;]]></indentation>
+				<search_def_txt><![CDATA[Search store here...]]></search_def_txt>
+				<select_txt><![CDATA[Entire Store]]></select_txt>
+				<btn_txt><![CDATA[Go]]></btn_txt>
+				<advanced_active>1</advanced_active>
+				<advnaced_label><![CDATA[Category]]></advnaced_label>
+				<ajax_suggest>0</ajax_suggest>
+				<chkfrq>518400</chkfrq>
+				<frtrn>1</frtrn>
+			</searchbycat>
+		</codnitivecatalog>
+	</default>
+</config>
